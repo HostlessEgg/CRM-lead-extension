@@ -1,4 +1,4 @@
-# OdooSecondTest - Extensión CRM Lead
+# Odoov18- Extensión CRM Lead
 
 Este repositorio contiene una prueba técnica en Odoo 18. El módulo principal se encuentra en:
 
