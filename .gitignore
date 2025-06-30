@@ -1,0 +1,22 @@
+# Odoo logs and cache
+*.log
+*.pyc
+__pycache__/
+
+# Editor settings
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Docker stuff
+web_data/
+db_data/
+.env
+
+# Python virtual environments
+venv/
+.env/
+

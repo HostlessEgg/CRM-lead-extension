@@ -1,0 +1,33 @@
+version: '3.3'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: odoo
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  web:
+    image: odoo:18.0
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    environment:
+      HOST: db
+      USER: odoo
+      PASSWORD: odoo
+    command: >
+      odoo -d odoo --db_host=db --db_user=odoo --db_password=odoo -i base --without-demo=all --log-level=debug
+    volumes:
+      - ./custom_addons:/mnt/extra-addons
+      - web_data:/var/lib/odoo
+    
+
+
+volumes:
+  db_data:
+  web_data:
