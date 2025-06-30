@@ -2,7 +2,7 @@
     'name': 'CRM Lead Extension',
     'version': '1.0',
     'summary': 'Extiende el modelo CRM Lead con campos personalizados',
-    'author': 'Carlos',
+    'author': 'Jaisher',
     'category': 'Sales/CRM',
     'depends': ['crm'],
     'data': [
